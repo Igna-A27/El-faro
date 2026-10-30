@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faro en la Tormenta</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="rain" aria-hidden="true"></div>
+<div id="flash" aria-hidden="true"></div>
+<main>
+  <header>
+    <button id="btn-mute" class="mute" aria-label="Silenciar">🔊</button>
+    <div class="lighthouse" aria-hidden="true">🗼</div>
+    <h1>Faro en la Tormenta</h1>
+  </header>
+
+  <section id="start" class="card center">
+    <div class="big" aria-hidden="true">🌩️</div>
+    <h2>Eres el guardián del faro</h2>
+    <p>Una tormenta golpea la isla. Cada hora llegará un imprevisto y deberás decidir.
+       Administra <b>combustible</b>, <b>energía</b> y <b>moral</b>. Si alguno llega a cero, el faro cae.
+       Resiste 10 horas hasta el amanecer.</p>
+    <button class="primary" id="btn-start">Comenzar la guardia</button>
+    <div class="best" id="best"></div>
+  </section>
+
+  <section id="game" class="hidden">
+    <div class="card stats" id="stats"></div>
+    <div class="progress" id="progress" style="margin:14px 0" aria-label="Progreso de la noche"></div>
+    <div class="card">
+      <div class="hour" id="hour"></div>
+      <h2 class="event-title" id="title"></h2>
+      <p class="event-text" id="text"></p>
+      <div class="options" id="options"></div>
+      <div class="result hidden" id="result" role="status"></div>
+      <button class="primary hidden" id="btn-next" style="margin-top:14px;width:100%">Continuar</button>
+    </div>
+  </section>
+
+  <section id="end" class="card center hidden">
+    <div class="big" id="end-icon"></div>
+    <h2 id="end-title"></h2>
+    <p id="end-text"></p>
+    <button class="primary" id="btn-again">Jugar de nuevo</button>
+  </section>
+
+  <footer>Hecho con HTML, CSS y JavaScript puro</footer>
+</main>
+
+<script src="game.js"></script>
+</body>
+</html>
